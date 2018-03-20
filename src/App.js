@@ -26,7 +26,7 @@ class App extends Component {
     //let savedState = JSON.parse(localStorage.getItem('TODO_STATE'))
 
     //Use axios to go to our server. Pass the username on the URL
-    axios.get(`https://localhost:8080/todos/${this.username.value}`)
+    axios.get(`https://jbluks-todo-backend.herokuapp.com/todos/${this.username.value}`)
       .then((response) => {
         //Update our state to be the todos that the server
         //sends back to us
@@ -50,7 +50,7 @@ class App extends Component {
 
     //Save our todos to the server. Send the username and the todos
     //in a POST request
-    axios.post('https://localhost:8080/todos', { 
+    axios.post('https://jbluks-todo-backend.herokuapp.com/todos', { 
       todos: this.state.todos,
       username: this.username.value
     })
