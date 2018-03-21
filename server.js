@@ -77,7 +77,7 @@ app.post('/todos', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-  res.sendFile('index.html',{root: __dirname + '/build'});
+  res.sendFile('index.html',{root: __dirname + './../build'});
 });
 
 app.listen(port, () => {
