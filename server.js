@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 //Use bodyparser middleware to handle JSON and create req.body for us
 app.use(bodyParser.json())
 
-app.use(express.static(__dirname + './build'));
+app.use(express.static(__dirname + '/build'));
 
 //Some sample data
 //Todos is an object, with usernames as the key, and an array of todos for each username
